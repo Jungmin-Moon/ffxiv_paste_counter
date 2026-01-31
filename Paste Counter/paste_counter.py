@@ -21,17 +21,17 @@ def paste_options(response):
 
     match response:
         case 1:
-            shelve_file["paste"] = shelve_file["paste"] + 15
+            shelve_file["paste"] = int(shelve_file["paste"]) + 15
         case 2:
-            shelve_file["paste"] = shelve_file["paste"] + 15
+            shelve_file["paste"] = int(shelve_file["paste"]) + 15
         case 3:
-            shelve_file["paste"] = shelve_file["paste"] + 20
+            shelve_file["paste"] = int(shelve_file["paste"]) + 20
         case 4:
-            shelve_file["paste"] = shelve_file["paste"] + 8
+            shelve_file["paste"] = int(shelve_file["paste"]) + 8
         case 5:
-            shelve_file["paste"] = shelve_file["paste"] + 3
+            shelve_file["paste"] = int(shelve_file["paste"]) + 3
         case 6:
-            shelve_file["paste"] = shelve_file["paste"] + 5
+            shelve_file["paste"] = int(shelve_file["paste"]) + 5
         case 7:
             set_current_paste()
         case _:
