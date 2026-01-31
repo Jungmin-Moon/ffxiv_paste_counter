@@ -72,7 +72,7 @@ while response != 0:
     paste_options(response)
     print("You still need " + str(1200 - int(shelve_file["paste"])) + " paste still.")
     
-    if shelve_file["paste"] == 1200:
+    if shelve_file["paste"] >= 1200:
         print("Congrats you got all 1200 paste you need.") 
         break
     
