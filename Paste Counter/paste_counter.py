@@ -3,7 +3,7 @@ import shelve
 def menu():
 
     print("You currently have " + str(shelve_file["paste"]) + " paste currently.")
-    print("This is a menu of options:")
+    print("Hit enter after typing in a number response.")
     print("Press 1 to add 15 from expert")
     print("Press 2 to add 15 from level cap")
     print("Press 3 to add 20 from leveling")
@@ -67,7 +67,8 @@ def check_key():
         return
     else:
         shelve_file["paste"] = 0
-        
+
+       
 shelve_file = shelve.open("paste counter")
 
 check_key()        
@@ -79,9 +80,14 @@ response = get_user_input_menu()
 while response != 0:
     
     paste_options(response)
+    
+    print("------------------------------------------------------")
+    
     print("You still need " + str(1200 - int(shelve_file["paste"])) + " paste still.")
     
-    if shelve_file["paste"] >= 1200:
+    print()
+    
+    if int(shelve_file["paste"]) >= 1200:
         print("Congrats you got all 1200 paste you need.") 
         break
     
