@@ -3,6 +3,7 @@ import shelve
 def menu():
 
     print("You currently have " + str(shelve_file["paste"]) + " paste currently.")
+    print()
     print("Hit enter after typing in a number response.")
     print("Press 1 to add 15 from expert")
     print("Press 2 to add 15 from level cap")
@@ -84,8 +85,6 @@ while response != 0:
     print("------------------------------------------------------")
     
     print("You still need " + str(1200 - int(shelve_file["paste"])) + " paste still.")
-    
-    print()
     
     if int(shelve_file["paste"]) >= 1200:
         print("Congrats you got all 1200 paste you need.") 
