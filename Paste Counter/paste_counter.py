@@ -1,7 +1,4 @@
 import shelve
-    
-
-shelve_file = shelve.open("paste counter")
                 
 def menu():
 
@@ -63,6 +60,18 @@ def get_user_input_menu():
         
         print("Invalid input, please enter a number between 0 and 7.")
         
+        
+def check_key():
+    
+    if "paste" in shelve_file:
+        return
+    else:
+        shelve_file["paste"] = 0
+        
+shelve_file = shelve.open("paste counter")
+
+check_key()        
+
 menu()
 
 response = get_user_input_menu()
